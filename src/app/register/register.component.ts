@@ -11,6 +11,7 @@ export class RegisterComponent implements OnInit {
 
   public RegisterForm=this.formBuilder.group({
     username:["",Validators.required],
+    
     email:["",[Validators.email,Validators.required]],
     password:["",[Validators.required, Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$')]]
   })
